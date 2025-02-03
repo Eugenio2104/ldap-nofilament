@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//mettere auth/login se si vuole indirizzare direttamente alla pagina login
+
 Route::get('/', function () {
     return view('welcome');
 });
