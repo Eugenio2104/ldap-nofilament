@@ -16,25 +16,28 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    <div class="position-relative d-flex justify-content-center align-items-center min-vh-100 bg-light">
+        @if (Route::has('login'))
+            <div class="position-fixed top-0 end-0 p-3 text-end z-10">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="fw-semibold text-secondary hover:text-dark">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="fw-semibold text-secondary hover:text-dark">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <img src="{{ asset('images/logosirih.png') }}" alt="Home" style="height: 200px;">
-                </div>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ms-3 fw-semibold text-secondary hover:text-dark">Register</a>
+                    @endif
+                @endauth
             </div>
+        @endif
+
+        <div class="container text-center">
+            <h1 class="display-4">Welcome to Laravel</h1>
+            <p class="lead">This is a simple example of a Laravel application using Bootstrap for styling.</p>
         </div>
-    </body>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

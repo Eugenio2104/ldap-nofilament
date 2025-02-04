@@ -1,3 +1,54 @@
-@tailwind base;
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+/* .dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+ */
+
+ .logo{
+    height: 70px;
+ }
+
+
+
+ .navbar-custom-height {
+    height: 100px;
+}
+
+
+/* carosello */
+
+.full-width-carousel {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    /* margin-top: -39px; Assicura che il carosello sia attaccato alla navbar */
+}
+
+.carousel-inner img {
+    height: 500px; /* Imposta l'altezza desiderata */
+    object-fit: cover; /* Adatta l'immagine senza deformarla */
+    width: 100%; /* Assicura che l'immagine riempia il contenitore */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+    border-radius: 50%; /* Arrotonda i bordi */
+    border: 2px solid white; /* Bordo bianco */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Aumenta l'area cliccabile */
+}
